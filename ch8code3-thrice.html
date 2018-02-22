@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Thrice Controller</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+		<script src="ch8code3-thrice.js"></script>
+	</head>
+
+<body> 
+	<div ng-app="mainApp" ng-controller="ThriceController">
+		<p>Enter a number: <input type="number" ng-model="number" /></p>
+		<button ng-click="thrice()">Multiply</button>
+		<p>Result: {{result}}</p>
+	</div>
+</body> 
+</html>

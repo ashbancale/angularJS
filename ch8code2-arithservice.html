@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Arith Service</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+		<script src="ch8code2-arithservice.js"></script>
+	</head>
+
+<body ng-app="mainApp"> 
+	<div ng-controller="MultiplyController">
+		<p>Enter first number: <input type="number" ng-model="firstNumber" /></p>
+		<p>Enter second number: <input type="number" ng-model="secondNumber" /></p>
+		<button ng-click="multiply()">Multiply</button>
+		<p>Result: {{result}}</p>
+	</div>
+</body> 
+</html>
