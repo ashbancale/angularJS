@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+
+	<body> 
+		<div ng-app="" ng-init="books=[ {title:'Pride and Prejudice',author:'Jane Austen',genre:'Romance'}, {title:'Dracula',author:'Bram Stoker',genre:'Horror'}, {title:'The Hobbit',author:'J.R.R Tolkien',genre:'Fantasy'}]"> 
+			<p>What's your name? <input type="text" ng-model="yourname"></p> 
+			<p>Hello <span ng-bind="yourname"></span>!</p> 
+			<p>Here are you books:</p> 
+			<ol> 
+				<li ng-repeat="book in books"> {{ 'Title: ' + book.title + ', Author: ' + book.author + ', Genre: ' + book.genre }} </li> 
+			</ol> 
+		</div>
+
+	</body> 
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+
+	<body ng-app="ownApp"> 
+		<div><h1>This is the first section</h1></div>
+			<div sample-custom-directive></div>
+		<div><h1>This is the second section</h1></div>
+		<div sample-custom-directive></div>
+		<script>
+			var ownApp = angular.module("ownApp", []);
+			ownApp.directive("sampleCustomDirective",function(){
+				return {
+					template: "<p>This is a directive that adds this line</p>"
+				};
+			});
+		</script>
+
+	</body> 
+</html>

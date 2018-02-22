@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+
+<body ng-app="date"> 
+	<div ng-controller="dateController">
+		Enter your full name:<input type="text" ng-model="fullName"/><br>
+		When did you join the group?(yyyy-mm-dd):<input type="text" ng-model="sampleDateJoined"/>
+		<h2>Date Filters</h2>
+		<p>Medium:{{sampleDateJoined | date: 'medium'}}</p>
+		<p>Medium Date:{{sampleDateJoined | date: 'mediumDate' }}</p>
+		<p>Short Date:{{sampleDateJoined | date: 'shortDate'}}</p>
+		<p>Hi {{fullName}}! You have joined the group in the month of {{sampleDateJoined | date: 'MMMM'}} on a {{sampleDateJoined | date:'EEEE'}} at {{sampleDateJoined | date:'ha'}}</p>
+	</div>
+	<script type="text/javascript">
+		angular.module("date", []) 
+			.controller("dateController", function ($scope){
+			$scope.fullName = "John Green";
+			$scope.sampleDateJoined = new Date(2013,03,16);
+		});
+	</script>
+</body> 
+</html>

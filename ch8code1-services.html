@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+		<script src="ch8code1-services.js"></script>
+	</head>
+
+<body ng-app="mySampleModule"> 
+	<div ng-controller="windowController">
+		<p>Window width: {{windowWidth}}px</p>
+		<p>The URL is:{{browserURL}}</p>
+		<ul>
+			<li>{{browserProtocol}}</li>
+			<li>{{browserHost}}</li>
+			<li>{{browserPort}}</li>
+		</ul>
+	</div>
+</body> 
+</html>

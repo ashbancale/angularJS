@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+
+<body ng-app="number"> 
+	<div ng-controller="numberController">
+		Enter a sample number:<input type="text" ng-model="sampleNumber"/><br>
+		Enter a sample number with decimal:<input type="text" ng-model="sampleNumberDec"/><br>
+		<h2>Filter for Numbers</h2>
+		<p>Sample number:{{sampleNumber}}</p>
+		<p>Sample number with Filter:{{sampleNumber | number:2}}</p>
+		<p>Sample number with Decimals Original:{{sampleNumberDec}}</p>
+		<p>Sample number with Decimals 2 places:{{sampleNumberDec | number: 2}}
+		</p>
+	</div>
+	<script type="text/javascript">
+		angular.module("number", []) 
+			.controller("numberController", function ($scope){
+			$scope.sampleNumber = 100;
+			$scope.sampleNumberDec = 100.436783;
+		});
+	</script>
+</body> 
+</html>

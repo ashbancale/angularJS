@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+
+	<body ng-app = "sample">
+		<div ng-controller = "samplecontroller" >
+			<h2>Welcome to the world of {{samplehello.title}}!</h2>
+		</div>
+
+		<script>
+			angular.module("sample", [])
+
+			.controller("samplecontroller", function($scope) {
+				$scope.samplehello = {};
+				$scope.samplehello.title = "AngularJS";
+			});
+		</script>
+	</body>
+	</html>

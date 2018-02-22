@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+
+<body ng-app="currency"> 
+	<div ng-controller="currencyController">
+		Enter a sample price with decimals:<input type="text" ng-model="samplePrice"/><br>
+		Enter a sample price (whole number only):<input type="text" ng-model="samplePriceWhole"/>
+		<h2>Currency Filter</h2>
+		<p>Sample Price:{{samplePrice | currency}}</p>
+		<p>Sample Price for Whole Nunmber: {{samplePriceWhole | currency}}</p>
+		<p>Sample Price Whole Number with other currency: {{samplePrice | currency:'£'}}</p>
+	</div>
+	<script type="text/javascript">
+		angular.module("currency", []) 
+			.controller("currencyController", function ($scope){
+			$scope.samplePrice = 100.445533;
+			$scope.samplePriceWhole = 100;
+		});
+	</script>
+</body> 
+</html>

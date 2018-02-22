@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+
+<body ng-app="case"> 
+	<div ng-controller="caseController">
+		Enter your first name:<input type="text" ng-model="firstName" /><br>
+		Enter your last name:<input type="text" ng-model="lastName" /><br>
+		<h2>Case Filters</h2>
+		<p>Original First Name: {{firstName}}</p>
+		<p>Original Last Name: {{lastName}} </p>
+		<p>LowerCase First Name: {{firstName | lowercase}}</p>
+		<p>UpperCase Last Name: {{lastName | uppercase}}</p>
+	</div>
+	<script type="text/javascript">
+		angular.module("case", []) 
+			.controller("caseController", function ($scope){
+			$scope.firstName = "will";
+			$scope.lastName = "AndeRson";
+		});
+	</script>
+</body> 
+</html>

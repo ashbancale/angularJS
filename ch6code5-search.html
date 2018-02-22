@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+
+<body ng-app> 
+<div ng-init="books=[ {title:'Pride and Prejudice',author:'Jane Austen'}, {title:'Dracula',author:'Bram Stoker'}, {title:'The Hobbit',author:'J.R.R Tolkien'}, {title:'Lord of the Rings',author:'J.R.R Tolkien'}, {title:'Summer Secrets',author:'Jane Green'}]"> </div>
+<label>Search: <input ng-model="searchingFor"></label>
+<table id="searchResults">
+	<tr><th>Title</th><th>Author</th></tr>
+	<tr ng-repeat="book in books | filter:searchingFor">
+		<td>{{book.title}}</td>
+		<td>{{book.author}}</td>
+	</tr>
+</table>
+</body> 
+</html>
